@@ -1,27 +1,28 @@
-# Weather_prediction_ltsm_model
+# weather_prediction_ltsm_model
 
-Harika bir fikir! Bir README.md dosyası, projenizi hem sizin hem de başkaları için anlaşılır ve erişilebilir kılar.
+Great idea! A README.md file makes your project understandable and accessible for both you and others.
 
-İşte projeniz için hazır, kapsamlı bir README.md dosyası. Bu metni doğrudan kopyalayıp GitHub deponuza yapıştırabilirsiniz.
+Here's a comprehensive README.md file ready for your project. You can copy and paste it directly into your GitHub repository.
 
 Markdown
 
-# ☀️ İspanya Şehirleri İçin LSTM Tabanlı Hava Durumu Tahmini
+# ☀️ LSTM-Based Weather Forecast for Spanish Cities
 
-Bu proje, İspanya'daki beş büyük şehir (Valencia, Madrid, Bilbao, Barcelona, Seville) için sıcaklık tahmini yapmak amacıyla **LSTM (Uzun-Kısa Süreli Hafıza)** sinir ağlarını kullanmaktadır. Model, geçmiş 24 saatlik veriyi analiz ederek bir sonraki saatteki sıcaklık tahminini yapacak şekilde eğitilmiştir.
+This project uses **LSTM (Long-Short-Term Memory)** neural networks to predict temperatures for five major cities in Spain (Valencia, Madrid, Bilbao, Barcelona, ​​Seville). The model is trained to predict the temperature for the next hour by analyzing the past 24 hours of data.
 
-## Projenin Amacı ve Özellikleri
+## Project Purpose and Features
 
-* **Zaman Serisi Analizi:** Geçmişe ait hava durumu verilerini kullanarak gelecekteki sıcaklıkları tahmin etme.
-* **Derin Öğrenme Modeli:** Her bir şehir için ayrı bir LSTM modeli eğitme ve bu modellerin performansını değerlendirme.
-* **Çoklu Önemli Özellikler:** Tahmin modelinde sıcaklık dışında basınç, nem, rüzgar hızı ve bulutluluk gibi diğer özellikleri de kullanma.
-* **Model Performans Değerlendirmesi:** Modellerin doğruluğunu, **RMSE (Ortalama Karesel Hatanın Karekökü)** metriği ile ölçme.
+* **Time Series Analysis:** Predicting future temperatures using historical weather data.
 
-## Model Performansı
+* **Deep Learning Model:** Training a separate LSTM model for each city and evaluating the performance of these models.
+* **Multiple Important Features:** Using features other than temperature in the prediction model, such as pressure, humidity, wind speed, and cloud cover.
+* **Model Performance Evaluation:** Measuring model accuracy with the **RMSE (Root Mean Square Error)** metric.
 
-Eğitilen modeller, test verileri üzerinde gösterdikleri düşük RMSE değerleri ile yüksek başarıya ulaştılar. Bu değerler, tahminlerin gerçek sıcaklıktan ortalama sapmasını gösterir.
+## Model Performance
 
-| Şehir | Test RMSE (°C) |
+The trained models achieved high performance with low RMSE values ​​on the test data. These values ​​represent the average deviation of the predictions from the actual temperature.
+
+| City | Test RMSE (°C) |
 | :--- | :--- |
 | **Bilbao** | **0.88** |
 | Madrid | 0.95 |
@@ -29,33 +30,38 @@ Eğitilen modeller, test verileri üzerinde gösterdikleri düşük RMSE değerl
 | Barcelona | 0.99 |
 | Seville | 1.07 |
 
-En iyi performansı gösteren Bilbao modeli, ortalama sadece **0.88 °C**'lik bir hata payıyla tahmin yaptı.
+The best-performing Bilbao model predicted with an average error of just 0.88 °C.
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
-* **Python:** Projenin temel programlama dili.
-* **Pandas:** Veri işleme ve analizi için kullanıldı.
-* **NumPy:** Sayısal işlemler ve dizi manipülasyonları için kullanıldı.
-* **TensorFlow / Keras:** Derin öğrenme modellerini oluşturmak ve eğitmek için kullanıldı.
-* **Scikit-learn:** Veri normalleştirme (MinMaxScaler) için kullanıldı.
+* Python: The project's primary programming language.
+* Pandas: Used for data processing and analysis.
+* NumPy: Used for numerical operations and array manipulations.
+* TensorFlow / Keras: Used to build and train deep learning models.
+* Scikit-learn: Used for data normalization (MinMaxScaler).
 
-## Dosya Yapısı
+## File Structure
 
-Projenin temel dosya yapısı aşağıdaki gibidir:
+The basic file structure of the project is as follows:
 
 /
-├── weather_features.csv            # Orijinal veri seti
-├── hava_durumu_tahmin_projesi.ipynb # Kaggle not defteri (ana kod)
-├── trained_models/                # Eğitilen modellerin kaydedildiği klasör
-│   ├── lstm_model_valencia.h5
-│   └── ... (diğer şehirlerin modelleri)
-├── README.md                      # Bu dosya
+├── weather_features.csv # Original dataset
+
+├── weather_prediction_project.ipynb # Kaggle notebook (main code)
+
+├── trained_models/ # Folder where trained models are stored
+
+│ ├── lstm_model_valencia.h5
+
+│ └── ... (models of other cities)
+
+├── README.md # This file
 
 
-## Projeyi Çalıştırma
+## Running the Project
 
-1.  Bu depoyu yerel makinenize klonlayın: `git clone <depo_adresiniz>`
-2.  Gerekli kütüphaneleri yükleyin: `pip install pandas numpy tensorflow scikit-learn`
-3.  `hava_durumu_tahmin_projesi.ipynb` dosyasını Jupyter veya benzeri bir ortamda açarak adımları sırasıyla çalıştırın.
+1. Clone this repository to your local machine: `git clone <your_repository_address>`
+2. Install the necessary libraries: `pip install pandas numpy tensorflow scikit-learn`
+3. Open the `weatherpredictionproject.ipynb` file in Jupyter or a similar environment and run the steps in order.
 
 ---
